@@ -100,7 +100,7 @@ const sendEmail = async (name,email,sub,token) =>{
                                 <div class="card_body">
                                     <p class="mb">Hi ${name},</p>
                                     <p class="mb">Please enter the following verification code to access your student Account.</p>
-                                    <h3><a href="https://bdstudentapp.herokuapp.com/student/verify/${token}" class="btn">Click here for verify</a></h3>
+                                    <h3><a href="http://localhost:5050/student/verify/${token}" class="btn">Click here for verify</a></h3>
                                     <p class="mb">The request for this access originated from your device</p>
                                     <div class="info">
                                         <p>In case you were not trying to access your Twilio Account & are seeing this email, please follow the instructions below:</p>

@@ -48,10 +48,10 @@ const verifyByPhone = async (req,res) =>{
     const for_data = students.find(data=> data.id == req.params.id);
 
     // Using bulksmsbd...
-    // await sendMessageUseBD(for_data.phone, `Hey, ${for_data.name}, Contrates! Your OTP code is ${phone_token}`);
+    await sendMessageUseBD(for_data.phone, `Hey, ${for_data.name}, Contrates! Your OTP code is ${phone_token}`);
 
     // Using twilio...
-    await sendSms(for_data.phone, `Hi, ${for_data.name}, Congrates! Your OTP code is ${phone_token}`);
+    // await sendSms(for_data.phone, `Hi, ${for_data.name}, Congrates! Your OTP code is ${phone_token}`);
 
     students[students.findIndex(data => data.id == req.params.id)] = {
         ...students[students.findIndex(data => data.id == req.params.id)],
