@@ -1,0 +1,109 @@
+<div class="section my-5">
+    <div class="advanced_studen_app">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12 col-sm-12">
+                    <div class="start">
+                        <div class="card shadow-lg">
+                            <div class="card-header py-3 d-flex justify-content-between">
+                                <div>
+                                    <h3><i class="fas fa-arrow-circle-right"></i> Advanced Student App <i class="fas fa-arrow-circle-left"></i></h3>
+                                </div>
+                                <div>
+                                    <a href="/student/create" class="btn btn-primary" style="margin-right:8px;"><i class="fas fa-plus"></i> Add New Student</a>
+                                    <a href="/student/unverify" class="btn btn-warning" style="margin-left:8px;"><i class="fas fa-info-circle" style="color:red;"></i> Unverify Student</a>
+                                </div>
+                            </div>
+                            <div class="card-body py-5 px-4">
+                                <div class="verify_student">
+                                    <% verifyed_student.forEach(data => { %>
+                                        <div class="student_box">
+                                            <div class="student_id">
+                                                <img title="Verifyed Member" class="verify_img" src="/images/verify_img.png" alt="">
+                                            </div>
+                                            <% if (data.photo == "avatar.jpg") { %>
+                                                <img src="/images/<%= data.photo %> " alt="">
+                                                <% } else { %>
+                                                  <img src="/images/student/<%= data.photo %> " alt="">
+                                            <% } %>
+                                            <div class="student_info">
+                                                <h3><%= data.name %> </h3>
+                                                <p><%= data.dep %> </p>
+                                            </div>
+                                            <div class="student_action_info text-center">
+                                                <a href="/student/<%= data.id %>" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                                <a href="/student/delete_student/<%= data.id %>" class="btn btn-danger delete_student"><i class="fas fa-trash"></i></a>
+                                            </div>
+                                        </div>
+                                    <% }) %>
+                                    <!-- Static Data -->
+                                    <!-- <div class="static_data">
+                                        
+                                    <div class="student_box">
+                                        <img src="/images/student/Rubel Hossain (Noman).jpg" alt="">
+                                        <div class="student_info">
+                                            <h3>Rubel Hossain</h3>
+                                            <p>Freelancer</p>
+                                        </div>
+                                        <div class="student_action_info text-center">
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="student_box">
+                                        <img src="/images/student/Rubel Hossain (Noman).jpg" alt="">
+                                        <div class="student_info">
+                                            <h3>Rubel Hossain</h3>
+                                            <p>Freelancer</p>
+                                        </div>
+                                        <div class="student_action_info text-center">
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="student_box">
+                                        <img src="/images/student/Rubel Hossain (Noman).jpg" alt="">
+                                        <div class="student_info">
+                                            <h3>Rubel Hossain</h3>
+                                            <p>Freelancer</p>
+                                        </div>
+                                        <div class="student_action_info text-center">
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="student_box">
+                                        <img src="/images/student/Rubel Hossain (Noman).jpg" alt="">
+                                        <div class="student_info">
+                                            <h3>Rubel Hossain</h3>
+                                            <p>Freelancer</p>
+                                        </div>
+                                        <div class="student_action_info text-center">
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="student_box">
+                                        <img src="/images/student/Rubel Hossain (Noman).jpg" alt="">
+                                        <div class="student_info">
+                                            <h3>Rubel Hossain</h3>
+                                            <p>Freelancer</p>
+                                        </div>
+                                        <div class="student_action_info text-center">
+                                            <a href="#" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                        </div>
+                                    </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <p class="text-center mb-0"><span style="font-size:20px;">®</span> 2022 All Right Reserved By <a href="https://developerrubel.com">Rubel Hossain</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div id="section">
+    <div class="show_single_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_data">
+                        <div class="name">
+                            <h1 class="mb-0 text-center"><%= single_student.name %> </h1>
+                            <p class="w-75 text-center mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, harum sequi recusandae in similique quas facilis quasi odio amet repellat?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="section">
+    <div class="section about_me my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="card" style="border:none;">
+                        <div class="my_photo p-5 pt-0 text-center">
+                            <% if (single_student.photo == "avatar.jpg") { %>
+                                <img class="rounded-circle shadow-lg mx-auto" src="/images/<%= single_student.photo %> " alt="">
+                                <% } else { %>
+                                    <img class="rounded-circle shadow-lg mx-auto" src="/images/student/<%= single_student.photo %> " alt="">
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card shadow">
+                        <div class="card-header d-flex py-3 justify-content-between">
+                            <h3 class="mb-0 text-center">About Me</h3>
+                            <a href="/student" class="btn btn-primary">Show All Student <i class="fas fa-rocket    "></i></a>
+                        </div>
+                        <div class="card-body position-relative">
+                            <a href="/student/edit/<%= single_student.id %> " class="btn btn-warning single_edit"><i class="fas fa-edit"></i></a>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p><strong>ID : </strong><span><%= single_student.id %> </span></p>
+                                    <p><strong>Name : </strong><span><%= single_student.name %> </span></p>
+                                    <p><strong>Email : </strong><a href="mailto:<%= single_student.email %> "><span><%= single_student.email %></span> <i id="mail" class="fas fa-link"></i></a></p>
+                                    <p><strong>Phone : </strong><span><%= single_student.phone %></span></p>
+                                    <p><strong>Department : </strong><span><%= single_student.dep %></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="social text-center py-3 w-50 d-flex justify-content-around mx-auto">
+                                <a href=""><i class="fab fa-facebook    "></i></a>
+                                <a href=""><i class="fab fa-twitter    "></i></a>
+                                <a href=""><i class="fab fa-youtube    "></i></a>
+                                <a href=""><i class="fab fa-instagram    "></i></a>
+                                <a href=""><i class="fab fa-linkedin    "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

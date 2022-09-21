@@ -1,0 +1,69 @@
+<div class="section my-5">
+    <div class="advanced_studen_app">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="start">
+                        <div class="card shadow-lg">
+                            <div class="card-header py-3">
+                                <div class="d-flex justify-content-between">
+                                    <a href="/student" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+                                    <h3 class="mb-0">Create New Student</h3>
+                                </div>
+                            </div>
+                            <div class="card-body py-2 px-4">
+                                <div class="create_student">
+                                    <form action="/student/create" method="post" enctype="multipart/form-data">
+                                        <div class="my-3">
+                                            <label for="">Name</label>
+                                            <input class="form-control" type="text" name="name" placeholder="Type your name..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="">Email</label>
+                                            <input class="form-control" type="text" name="email" placeholder="Type your email..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="">Phone(musb be need country code example: +880)</label>
+                                            <input class="form-control" type="text" name="phone" placeholder="Type your phone..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <div class="form-group">
+                                              <label for="">Department</label>
+                                              <select class="form-control" name="dep" id="">
+                                                <option>--Select--</option>
+                                                <option>Freelancer</option>
+                                                <option>Web Developer</option>
+                                                <option>Graphic Designer</option>
+                                                <option>Marketing</option>
+                                                <option>Social Media</option>
+                                                <option>Lead Collector</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="get_image" class="mbminus">Photo</label>
+                                            <div class="d-flex justify-content-center">
+                                                <img class="preview_image" src="/images/student/Rubel Hossain (Noman).jpg" alt=""><br>
+                                            </div><br>
+                                            <label for="get_image" style="margin-top: -37px;">
+                                                <img class="get_image" src="/images/camera.png" alt="">
+                                            </label>
+                                            <button class="btn btn-warning w-100 remove_image">Remove Image</button>
+                                            <input id="get_image" type="file" name="student-photo" hidden class="form-control">
+                                        </div>
+                                        <div class="my-3">
+                                            <input class="form-control btn btn-primary w-100" type="submit" value="Add New Student" id="">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <p class="text-center mb-0"><span style="font-size:20px;">®</span> 2022 All Right Reserved By <a href="https://developerrubel.com">Rubel Hossain</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

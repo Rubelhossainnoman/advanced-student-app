@@ -1,0 +1,77 @@
+@media all and (max-width:1199px) {
+    .card-header.py-3.d-flex.justify-content-between {
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    #section .section.about_me .card-header {
+        justify-content: space-between !important;
+        display: flex !important;
+    }
+}
+@media all and (max-width:991px) {
+    .verify_student {
+        display: grid;
+        grid-gap: 40px 30px;
+        grid-template-columns: auto auto;
+    }
+}
+@media all and (max-width:767px) {
+    .verify_student {
+        grid-gap: 50px 30px;
+        grid-template-columns: auto;
+    }
+}
+@media all and (max-width:436px) {
+    .card-header div a {
+        display: block;
+        width: 100% !important;
+        min-width: 100%;
+        text-align: center;
+        margin: 10px 0 !important;
+    }
+    .card-header.py-3.d-flex.justify-content-between {
+        display: block !important;
+    }
+    div#section .section .my_photo img {
+        width: 200px;
+        height: 200px;
+        border: 9px solid #fff;
+    }
+}
+@media all and (max-width:352px) {
+    .student_box {
+        width: 245px;
+    }
+    .student_box img {
+        width: 185px;
+        height: 185px;
+        margin-top: 40px;
+    }
+    img.verify_img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+    div#section .section .card-header {
+        display: block !important;
+    }
+    div#section .section .card-header h3 {
+        width: 100%;
+        margin-bottom: 14px !important;
+    }
+    div#section .section .card-header a {
+        width: 100%;
+    }
+    .show_single_page .name h1 {
+        font-size: 53px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 52px;
+        margin-bottom: 20px !important;
+    }
+}

@@ -1,0 +1,73 @@
+<div class="section my-5">
+    <div class="advanced_studen_app">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="start">
+                        <div class="card shadow-lg">
+                            <div class="card-header py-3">
+                                <div class="d-flex justify-content-between">
+                                    <a href="/student/<%= edit_data.id %> " class="btn btn-primary"><i class="fas fa-arrow-left"></i> View Student</a>
+                                    <h5 class="mb-0">Edit <%= edit_data.name %><span>(<%= edit_data.id %> )</span></h5>
+                                </div>
+                            </div>
+                            <div class="card-body py-2 px-4">
+                                <div class="create_student">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <div class="my-3">
+                                            <label for="">Name</label>
+                                            <input class="form-control" type="text" name="name" value="<%= edit_data.name %> " placeholder="Type your name..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="">Email</label>
+                                            <input class="form-control" type="text" name="email" value="<%= edit_data.email %> " placeholder="Type your email..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="">Phone</label>
+                                            <input class="form-control" type="text" name="phone" value="<%= edit_data.phone %> " placeholder="Type your phone..." id="">
+                                        </div>
+                                        <div class="my-3">
+                                            <div class="form-group">
+                                              <label for="">Department</label>
+                                              <select class="form-control" name="dep" id="">
+                                                <option>--Select--</option>
+                                                <option <% if (edit_data.dep == "Freelancer") { %> selected <% } %> vlaue="Freelancer" >Freelancer</option>
+                                                <option <% if (edit_data.dep == "Web Developer") { %> selected <% } %> value="Web Developer">Web Developer</option>
+                                                <option <% if (edit_data.dep == "Graphic Designer") { %> selected <% } %> value="Graphic Designer">Graphic Designer</option>
+                                                <option <% if (edit_data.dep == "Marketing") { %> selected <% } %> value="Marketing">Marketing</option>
+                                                <option <% if (edit_data.dep == "Social Media") { %> selected <% } %> value="Social Media">Social Media</option>
+                                                <option <% if (edit_data.dep == "Lead Collector") { %> selected <% } %> value="Lead Collector">Lead Collector</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="my-3">
+                                            <label for="get_image" class="mbminus">Photo</label>
+                                            <div class="d-flex justify-content-center">
+                                                <% if (edit_data.photo == "avatar.jpg") { %>
+                                                    <img class="preview_image for_edit" src="/images/<%= edit_data.photo %> " alt="">
+                                                    <% } else { %>
+                                                      <img class="preview_image for_edit" src="/images/student/<%= edit_data.photo %> " alt="">
+                                                <% } %><br>
+                                            </div><br>
+                                            <label for="get_image" style="margin-top: -37px;">
+                                                <img class="get_image" src="/images/camera.png" alt="">
+                                            </label>
+                                            <button class="btn btn-warning w-100 remove_image">Remove Image</button>
+                                            <input id="get_image" type="file" name="student-photo" hidden id="get_image" class="form-control">
+                                        </div>
+                                        <div class="my-3">
+                                            <input class="form-control btn btn-primary w-100" type="submit" value="Update <%= edit_data.name %> Data " id="">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-footer py-3">
+                                <p class="text-center mb-0"><span style="font-size:20px;">®</span> 2022 All Right Reserved By <a href="https://developerrubel.com">Rubel Hossain</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Start form here...design part */
+.verify_student {
+    display: flex;
+    grid-gap: 50px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.student_box{
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    transition: all .3s ease-in-out;
+    border: 1px solid #dedede;
+    text-align: center;
+    cursor: grab;
+    background-color: #fff;
+    position: relative;
+}
+.student_box:hover{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    transition: all .3s ease-in-out;
+}
+.student_box img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border: 10px solid #fff;
+    transition: all .3s ease-in-out;
+}
+img.verify_img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.student_box:hover img{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    transition: all .3s ease-in-out;
+}
+.student_box .student_info{
+    padding: 20px 20px 0 20px;
+}
+.student_box .student_action_info{
+    padding: 10px 20px 20px 20px;
+}
+.student_box .student_info p{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.student_id {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.student_id p {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #dedede;
+    line-height: 35px;
+    border-radius: 50%;
+}
+/* unverify_data */
+.request_button{
+    pointer-events: none;
+}
+.unverify_data tr td img{
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fafafa;
+    box-shadow: 0 0 9px 3px #ddd;
+}
+div#unverifyTable_length {
+    float: left;
+}
+div#unverifyTable_filter {
+    padding-bottom: 10px;
+}
+
+/* Create form */
+.get_image{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.preview_image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 10px solid #fff;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: 50%;
+    margin-bottom: -10px;
+    display: none;
+}
+.remove_image{
+    display: none;
+}
+.preview_image.for_edit{
+    display: block;
+}
+/* Single student */
+.show_single_page{
+    background-image: url(/images/interior-details-of-modern-hospital-state-of-the-a-PTNF5AY-1-1024x684.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px 0;
+    position: relative;
+    z-index: 9;
+}
+.show_single_page::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295);
+    z-index: -1;
+}
+.show_single_page .name h1{
+    font-size: 80px;
+    font-weight: 600;
+    color: #fff;
+}
+.show_single_page .name p{
+    color: #fff;
+}
+.my_photo img{
+    border: 15px solid #fff;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: auto;
+}
+.social a i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #ffc107;
+    color: #fff;
+    transition: all .3s ease;
+    font-size: 20px;
+}
+
+.social a i:hover {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    transition: all .3s ease;
+    transform: scale(1.1);
+}
+.single_edit {
+    position: absolute;
+    right: 20px;
+}
