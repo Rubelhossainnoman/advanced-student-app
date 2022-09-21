@@ -12,14 +12,14 @@ const sendMessageUseBD = require('../utility/sendSMSBd');
  */
 const showHomePage = (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
-    const verifyed_student = students.filter(data => data.isverify == "done" || data.phone_token == "done");
+    const verifyed_student = students.filter(data => data.isverify == true && data.phone_token == true);
     res.render('student/index', {
         verifyed_student
     });
 }
 const unverifyStudent = (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
-    const unverifyed_student = students.filter(data => data.isverify == false || data.isverify == true);
+    const unverifyed_student = students.filter(data => data.isverify == false || data.phone_token == false);
     res.render('student/unverify',{
         unverifyed_student
     });
@@ -48,10 +48,10 @@ const verifyByPhone = async (req,res) =>{
     const for_data = students.find(data=> data.id == req.params.id);
 
     // Using bulksmsbd...
-    await sendMessageUseBD(for_data.phone, `Hey, ${for_data.name}, Contrates! Your OTP code is ${phone_token}`);
+    // await sendMessageUseBD(for_data.phone, `Hey, ${for_data.name}, Contrates! Your OTP code is ${phone_token}`);
 
     // Using twilio...
-    // await sendSms(for_data.phone, `Hi, ${for_data.name}, Congrates! Your OTP code is ${phone_token}`);
+    await sendSms(for_data.phone, `Hi, ${for_data.name}, Congrates! Your OTP code is ${phone_token}`);
 
     students[students.findIndex(data => data.id == req.params.id)] = {
         ...students[students.findIndex(data => data.id == req.params.id)],
@@ -65,11 +65,10 @@ const verifydone = (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
     students[students.findIndex(data => data.phone_token == num)] = {
         ...students[students.findIndex(data => data.phone_token == num)],
-        isverify : "done",
-        phone_token : "done"
+        phone_token : true
     }
     writeFileSync(path.join(__dirname,'../db/student.json'), JSON.stringify(students));
-    res.redirect('/student');
+    res.redirect('/student/unverify');
 }
 
 /**
@@ -99,7 +98,8 @@ const studentDataStore = async (req,res) =>{
         dep : dep,
         photo :req.file ? req.file.filename : "avatar.jpg",
         isverify : false,
-        token : token
+        token : token,
+        phone_token : false
     });
 
     // Data write..here...
