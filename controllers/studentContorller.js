@@ -25,7 +25,7 @@ const unverifyStudent = (req,res) =>{
     });
 }
 /**
- * Verify student by email line 29 to 38...
+ * Verify student by email line 
  */
 const emailverifyaccount = (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
@@ -39,7 +39,7 @@ const emailverifyaccount = (req,res) =>{
 }
 
 /**
- * Phone verify method post...line 43 to 68...
+ * Phone verify method post...
  */
 const verifyByPhone = async (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
@@ -72,7 +72,7 @@ const verifydone = (req,res) =>{
 }
 
 /**
- * Create student here... line 73 to 105...
+ * Create student here... 
  */
 const createStudent = (req,res) =>{
     res.render('student/create');
@@ -121,7 +121,7 @@ const showSingleStudent = (req,res) =>{
 }
 
 /**
- * Edit single student line... 121 to 143....
+ * Edit single student line...
  */
 const editSingleStudent = (req,res) =>{
     const students = JSON.parse(readFileSync(path.join(__dirname,'../db/student.json')));
